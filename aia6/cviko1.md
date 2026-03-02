@@ -1,5 +1,5 @@
 ## __dátové typy__ 
-rovnaké ako v c/c++, niektoré nové
+rovnaké ako v c/c++, niektoré nové  
 - celočíselné: **int**, long, short...
 - desatinné: **double**, **float**, decimal
 - znakový: **char** (`char a = 'q';`)
@@ -66,9 +66,10 @@ foreach(int x in pole){
 - spravidla sa pointery nepoužívajú
 - štruktúry fungujú v princípe rovnako ako v c++ (nie v c!) a ich funkcionality spravidla nahrádzajú triedy
 
-
-príklad k cviku 1: načítanie *n* čísel a výpočet ich aritmetického priemeru
-__verzia 1__, každé číslo na novom riadku (naivný C prístup)
+## príklad k cviku 1 
+- načítanie *n* čísel a výpočet ich aritmetického priemeru
+### __verzia 1__
+- každé číslo na novom riadku (naivný C prístup)
 ```cs
         static void Main(string[] args)
         {
@@ -83,16 +84,17 @@ __verzia 1__, každé číslo na novom riadku (naivný C prístup)
             Console.WriteLine(priemer);
         }
 ```
-vstup:
-4
-1
-2
-3
-5
-výstup:
-2,75
+vstup:  
+4  
+1  
+2  
+3  
+5  
+výstup:  
+2,75  
 
-__verzia 2__: načítanie v jednom riadku bez udania počtu
+### __verzia 2__
+- načítanie v jednom riadku bez udania počtu
 ```cs
         static void Main(string[] args)
         {
@@ -108,5 +110,5 @@ __verzia 2__: načítanie v jednom riadku bez udania počtu
             Console.WriteLine(priemer);
         }
 ```
-vstup: 1 2 3 5
+vstup: 1 2 3 5  
 výstup: 2,75
