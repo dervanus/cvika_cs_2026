@@ -46,7 +46,8 @@
             return 100 * danovyKoeficient;
         }
         public abstract string Popis();
-        
+```
+```cs
 //metody v derived class (potomkovi)
         public override double VypocitajDaneNaObyvatela()
         {
