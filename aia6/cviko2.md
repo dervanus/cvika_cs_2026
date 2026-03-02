@@ -19,6 +19,7 @@
 
 ### modifiers
 - upravujú prístup k triede alebo členu
+
 | modifiers | trieda | člen |
 | --------- | ------ | ---- |
 | `public` | prístupná z akejkoľvek triedy | prístupný z akejkoľvek triedy |
