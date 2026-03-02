@@ -18,6 +18,12 @@
   
 ## polymorfizmus 
 - schopnosť členov (predovšetkým metód) meniť svoje správanie na základe implementácie
+- základné druhy:
+  1. ad-hoc polymorfizmus - preťažovanie metód, preťažovanie operátorov
+  2. parametrický polymorfizmus - pomocou generík
+  3. podtypový (inkluzívny) polymorfizmus - prekrývanie metód
+  4. koerčný polymorfizmus - možnosť využitia premennej iného dátového typu ako metóda žiada kvôli implicitnému (alebo explicitnému) pretypovaniu
+
 ### preťažovanie metód (method overloading) 
 - dve a viac metód majú rovnaký názov, ale odlišné parametre
 ```cs
