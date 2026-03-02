@@ -1,4 +1,5 @@
-__dátové typy__ : rovnaké ako v c/c++, niektoré nové
+## __dátové typy__ 
+rovnaké ako v c/c++, niektoré nové
 - celočíselné: **int**, long, short...
 - desatinné: **double**, **float**, decimal
 - znakový: **char** (`char a = 'q';`)
@@ -12,7 +13,7 @@ var z = new int[10]; //z je intove pole
 ```
 - *špeciálny dátový typ pre fajnšmekrov: dynamic*
 
-__pretypovávanie__: 
+## __pretypovávanie__ 
 - medzi číselnými typmi a objektmi - niekedy je potrebná explicitná konverzia, niekedy stačí implicitná (podľa toho ako bude kompilátor papuľovať alebo potreby):
 ```cs
 int a = 4;
@@ -31,7 +32,7 @@ int a2 = Convert.ToInt32(a); //moznost 2
 int.TryParse(a, out int a3); //moznost 3 pre fajnsmekrov
 ```
 
-__načítavanie z konzoly a výpis do konzoly__
+## __načítavanie z konzoly a výpis do konzoly__
 ```cs
 //nacitavanie
 int a = Console.Read(); //nacita iba jeden znak, treba pretypovat na char
@@ -42,25 +43,29 @@ Console.Write(a); //vypise na riadok bez enteru
 Console.WriteLine(a); //odporucane, vypise na riadok s enterom
 ```
 
-__polia__: vždy dynamicky alokované, nie je potrebná dealokácia, inak práca v princípe identická s c/c++; hranaté zátvorky sa dávajú k dátovému typu
+## __polia__
+- vždy dynamicky alokované, nie je potrebná dealokácia, inak práca v princípe identická s c/c++; hranaté zátvorky sa dávajú k dátovému typu
 ```cs
 int[] pole = new int[n];
 int[] pole2 = {2, 4, 5, 9};
 ```
 
-__rozhodovanie__: úplne rovnaké ako v c/c++, je však možné v `switch`i použiť ako argument aj string a ternárny operátor musí vracať hodnotu (teda, nie je možné tam použiť void funkcie)
+## __rozhodovanie__
+- úplne rovnaké ako v c/c++, je však možné v `switch`i použiť ako argument aj string a ternárny operátor musí vracať hodnotu (teda, nie je možné tam použiť void funkcie)
 
-__cykly__: `while`, `do..while` aj `for` fungujú rovnako ako v c/c++, pribudol však nový cyklus `foreach`, ktorý traverzuje kolekciou (poľom, zoznamom, enumom)
+## __cykly__
+- `while`, `do..while` aj `for` fungujú rovnako ako v c/c++, pribudol však nový cyklus `foreach`, ktorý traverzuje kolekciou (poľom, zoznamom, enumom)
 ```cs
 foreach(int x in pole){
   //telo
 }
 ```
 
-__ostatné rozdiely__:
+## __ostatné rozdiely__
 - nie sú tu makrá (`#define`)
 - spravidla sa pointery nepoužívajú
 - štruktúry fungujú v princípe rovnako ako v c++ (nie v c!) a ich funkcionality spravidla nahrádzajú triedy
+
 
 príklad k cviku 1: načítanie *n* čísel a výpočet ich aritmetického priemeru
 __verzia 1__, každé číslo na novom riadku (naivný C prístup)
