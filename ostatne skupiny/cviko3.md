@@ -1,5 +1,5 @@
-**__OOP__**
-__základné pojmy__:
+# **__OOP__**
+## __základné pojmy__
 - menný priestor (namespace) - kontajner pre triedy a iné menné priestory, funguje ako knižnica a volá sa pomocou `using` (`using System;`)
 - trieda (class) - šablóna, podľa ktorej sa vytvárajú objekty, zoskupuje vlastnosti a správanie objektu reálneho sveta
 - objekt (object) - jedna inštancia triedy
@@ -9,22 +9,24 @@ __základné pojmy__:
 - metóda (method) - funkcia, ktorá popisuje aspekt správania triedy
 - člen triedy (member) - súhrnný názov pre atribúty a metódy, pristupuje sa k nim cez . (ako v štruktúrach v C)
 - konštruktor (constructor) - špeciálna metóda volaná iba raz, pri inštanciovaní triedy (vytváraní objektu), nemá dátový typ a má rovnaké meno ako trieda
-
 - `this.` - špecifikácia pri prístupe k členom danej triedy (ekvivalentné `self.` v Pythone, len nie je nutné posielať ako parameter/argument)
-- štyri piliere OOP
-  - abstrakcia - triedy v princípe neobsahujú žiadne konkrétne dáta, iba štruktúru
-  - enkapsulácia - triedy zoskupujú vlastnosti aj správanie objektu
-  - dedičnosť - triedy môžu byť buď potomkom inej triedy (a obsahovať rovnaké metódy a atribúty), alebo mať potomkov (ktorí obsahujú rovnaké metódy a atribúty)
-  - polymorfizmus - člen triedy (predovšetkým metóda) môže mať iné správanie v závislosti od implementácie
 
-modifiers: trieda alebo jej členy môžu byť
-- `public` - trieda alebo člen je prístupný z akejkoľvek triedy
-- `private` - člen je prístupný iba v rámci danej triedy (nedá sa aplikovať na triedy)
-  - ak nie je uvedené ani `public` ani `private`, daný člen je defaultne `private`
-- `static`
-  - člen je možné volať aj bez inštanciácie triedy, je zdieľaný medzi všetkými objektmi a triedou; nemôže používať `this.` ani pristupovať k nestatickým premenným
-  - trieda sa nedá inštanciovať, nedá sa z nej dediť a môže obsahovať iba `static` členy
+## štyri piliere OOP
+- abstrakcia - triedy v princípe neobsahujú žiadne konkrétne dáta, iba štruktúru
+- enkapsulácia - triedy zoskupujú vlastnosti aj správanie objektu
+- dedičnosť - triedy môžu byť buď potomkom inej triedy (a obsahovať rovnaké metódy a atribúty), alebo mať potomkov (ktorí obsahujú rovnaké metódy a atribúty)
+- polymorfizmus - člen triedy (predovšetkým metóda) môže mať iné správanie v závislosti od implementácie
 
+## modifiers
+- upravujú prístup k triede alebo členu
+
+| modifiers | trieda | člen |
+| --------- | ------ | ---- |
+| `public` | prístupná z akejkoľvek triedy | prístupný z akejkoľvek triedy |
+| `private` | - | prístupný iba v rámci danej triedy |
+| `static` | nedá sa inštanciovať, nedá sa z nej dediť a môže obsahovať iba `static` členy |  je ho možné volať aj bez inštanciácie triedy, je zdieľaný medzi všetkými objektmi a triedou; nemôže používať `this.` ani pristupovať k nestatickým premenným
+
+## systémové triedy
 - `Main` v triede `Program` je defaultne `static` a preto aj ostatné členy tej triedy musia byť `static`
 - väčšina systémových tried je `static`, príklady volaných metód takýchto tried
 ```cs

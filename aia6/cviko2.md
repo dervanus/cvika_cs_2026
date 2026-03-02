@@ -1,5 +1,5 @@
-## **__OOP__**
-### __základné pojmy__
+# **__OOP__**
+## __základné pojmy__
 - menný priestor (namespace) - kontajner pre triedy a iné menné priestory, funguje ako knižnica a volá sa pomocou `using` (`using System;`)
 - trieda (class) - šablóna, podľa ktorej sa vytvárajú objekty, zoskupuje vlastnosti a správanie objektu reálneho sveta
 - objekt (object) - jedna inštancia triedy
@@ -11,13 +11,13 @@
 - konštruktor (constructor) - špeciálna metóda volaná iba raz, pri inštanciovaní triedy (vytváraní objektu), nemá dátový typ a má rovnaké meno ako trieda
 - `this.` - špecifikácia pri prístupe k členom danej triedy (ekvivalentné `self.` v Pythone, len nie je nutné posielať ako parameter/argument)
 
-### štyri piliere OOP
+## štyri piliere OOP
 - abstrakcia - triedy v princípe neobsahujú žiadne konkrétne dáta, iba štruktúru
 - enkapsulácia - triedy zoskupujú vlastnosti aj správanie objektu
 - dedičnosť - triedy môžu byť buď potomkom inej triedy (a obsahovať rovnaké metódy a atribúty), alebo mať potomkov (ktorí obsahujú rovnaké metódy a atribúty)
 - polymorfizmus - člen triedy (predovšetkým metóda) môže mať iné správanie v závislosti od implementácie
 
-### modifiers
+## modifiers
 - upravujú prístup k triede alebo členu
 
 | modifiers | trieda | člen |
@@ -26,7 +26,7 @@
 | `private` | - | prístupný iba v rámci danej triedy |
 | `static` | nedá sa inštanciovať, nedá sa z nej dediť a môže obsahovať iba `static` členy |  je ho možné volať aj bez inštanciácie triedy, je zdieľaný medzi všetkými objektmi a triedou; nemôže používať `this.` ani pristupovať k nestatickým premenným
 
-### systémové triedy
+## systémové triedy
 - `Main` v triede `Program` je defaultne `static` a preto aj ostatné členy tej triedy musia byť `static`
 - väčšina systémových tried je `static`, príklady volaných metód takýchto tried
 ```cs
@@ -52,7 +52,7 @@ string B = A.ToString(); //"instancia" A ("struktury" int), static metoda ToStri
 int C = int.Parse(B); //static "struktura" int, static metoda Parse
 ```
 
-### dedičnosť
+## dedičnosť
 - dedičnosť - schopnosť triedy vytvárať potomkov (triedy s aspoň rovnakými členmi) alebo byť potomkom inej triedy (=> mať rovnaké členy ako predok)
   - základná trieda (base class/parent class) - trieda, z ktorej sa dedia členy
   - odvodená trieda (derived class/child class) - trieda, ktorá zdedila členy
