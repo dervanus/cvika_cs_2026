@@ -3,7 +3,7 @@
 - menný priestor (namespace) - kontajner pre triedy a iné menné priestory, funguje ako knižnica a volá sa pomocou `using` (`using System;`)
 - trieda (class) - šablóna, podľa ktorej sa vytvárajú objekty, zoskupuje vlastnosti a správanie objektu reálneho sveta
 - objekt (object) - jedna inštancia triedy
-- atribút - premenná triedy
+- atribút (data member) - premenná triedy
   - vlastnosť (property) - premenná triedy slúžiaca na vonkajší opis triedy (zvyčajne `public`)
   - field - lokálna premenná triedy slúžiaca predovšetkým pre doplnkové účely (zvyčajne `private`)
 - metóda (method) - funkcia, ktorá popisuje aspekt správania triedy
