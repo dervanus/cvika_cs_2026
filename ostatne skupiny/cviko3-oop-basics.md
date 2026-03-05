@@ -6,6 +6,7 @@
 - atribút (data member) - premenná triedy
   - vlastnosť (property) - premenná triedy slúžiaca na vonkajší opis triedy (zvyčajne `public`)
   - field - lokálna premenná triedy slúžiaca predovšetkým pre doplnkové účely (zvyčajne `private`)
+  - spravidla (ale nie vždy), property = field + getter/setter
 - metóda (method) - funkcia, ktorá popisuje aspekt správania triedy
 - člen triedy (member) - súhrnný názov pre atribúty a metódy, pristupuje sa k nim cez . (ako v štruktúrach v C)
 - konštruktor (constructor) - špeciálna metóda volaná iba raz, pri inštanciovaní triedy (vytváraní objektu), nemá dátový typ a má rovnaké meno ako trieda
