@@ -94,7 +94,7 @@ string veta = kolekcia.Aggregate((x, y) => x + " " + y);
 | `Enumerable.Range()` | `int` (začiatok rozsahu), `int` (veľkosť rozsahu) | `IEnumerable` | rozsah čísel |
 | `Enumerable.Repeat<DT>()` | prvok, `int` (počet opakovaní) | `IEnumerable` | kolekcia so zopakovaným prvkom |
 
-[^1] pri jednoduchých premenných argument `x => x`, pri objektoch `x => x.atribut`
-[^2] používa sa predovšetkým pri zoraďovaní objektov, `OrderBy` zoradí podľa jedného atribútu a ak viaceré objekty majú rovnakú hodnotu toho atribútu, `ThenBy` zoradí podľa druhého atribútu
-[^3] tieto štyri metódy, ak taký prvok neexistuje, vyhodia výnimku; ich alternatívy `ElementAtOrDefault`, `FirstOrDefault`, `LastOrDefault` a `SingleOrDefault`, ak prvok neexistuje, vrátia defaultnú hodnotu DT
-[^4] vyhodí výnimku aj keď ich predikátu zodpovedá viac
+[^1]: pri jednoduchých premenných argument `x => x`, pri objektoch `x => x.atribut`
+[^2]: používa sa predovšetkým pri zoraďovaní objektov, `OrderBy` zoradí podľa jedného atribútu a ak viaceré objekty majú rovnakú hodnotu toho atribútu, `ThenBy` zoradí podľa druhého atribútu
+[^3]: tieto štyri metódy, ak taký prvok neexistuje, vyhodia výnimku; ich alternatívy `ElementAtOrDefault`, `FirstOrDefault`, `LastOrDefault` a `SingleOrDefault`, ak prvok neexistuje, vrátia defaultnú hodnotu DT
+[^4]: vyhodí výnimku aj keď ich predikátu zodpovedá viac
