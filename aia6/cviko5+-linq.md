@@ -72,7 +72,7 @@ string veta = kolekcia.Aggregate((x, y) => x + " " + y);
 | metóda | argument | návratový DT | popis |
 | ------ | -------- | -------- | ----- |
 | `kol.OrderBy()` | `Func` | `IEnumerable` | zoradenie vzostupne[^1] |
-| `kol.OrderByDescending()` | `Func` | `IEnumerable ` | zoradenie zostupne |
+| `kol.OrderByDescending()` | `Func` | `IEnumerable` | zoradenie zostupne |
 | `kol.ThenBy()` / `kol.ThenByDescending()` | `Func` | `IEnumerable` | druhotné zoraďovanie[^2] |
 | `kol.All()` | `Predicate` | `bool` | či všetky prvky kolekcie zodpovedajú predikátu |
 | `kol.Any()` | `Predicate` | `bool` | či aspoň jeden prvok kolekcie zodpovedá predikátu |
