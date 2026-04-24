@@ -56,3 +56,78 @@ namespace Kalkulacka
     }
 }
 ```
+
+### Form1.Designer.cs
+- tu je popísaná štruktúra okna, sú tu vymenované všetky vlastnosti a udalosti a ich **súčasné** hodnoty
+- kód v tomto súbore sa automaticky aktualizuje podľa zmien v dizajnovej časti Form1.cs
+
+## Vlastnosti
+- hodnoty, ktoré definujú predovšetkým vzhľad prvku
+- mnohé z nich sú spoločné pre viacero alebo všetky prvky, niektoré sú jedinečné pre daný prvok
+- **(Name)** - meno prvku, pomocou ktorého k nemu pristupujeme v kóde
+  - na vizuálnu stránku nemá žiadny vplyv, je ho však vhodné a odporúčané meniť predovšetkým vzhľadom na narastajúci počet prvkov
+- **Text** - text asociovaný s daným prvkom, ktorý je zobrazený pri alebo v danom prvku
+  - vždy `string`
+- **Enabled** - určuje prístup používateľa k prvku
+  - pri `false` je prvok viditeľný ale neprístupný
+- **Visible** - určuje viditeľnosť prvku
+  - pri `false` je prvok neviditeľný
+- ďalšie vlastnosti sa týkajú fontu, pozadia, farby, polohy, veľkosti a podobne
+
+## Udalosti
+- metódy, ktoré sa vyvolajú po konkrétnej interakcii používateľa s prvkom
+- vytvárajú sa buď dvojklikom na konkrétnu udalosť v Properties okne (klik pravým na prvok -> Properties -> Events), prípadne jedna konkrétna udalosť je pre daný prvok "typická" a dá sa vytvoriť dvojklikom na daný prvok (napr. pre `Button` je to `Click`)
+- v kódovej časti sa automaticky vytvorí metóda, ktorá je `private`, `void`, meno je zložené z názvu prvku a udalosti a má dva parametre, `sender` typu `object` a `e` typu `EventArgs` (alebo `KeyEventArgs` alebo `MouseEventArgs`)
+```cs
+        private void buttonVypocitaj_Click(object sender, EventArgs e)
+        {
+
+        }
+```
+- tip: ak omylom vytvoríte udalosť, nevymazávajte inštiktívne jej kód; ak ju chcete odstrániť, v Properties okne sa vytvorenú udalosť kliknite pravým -> Reset
+  - ak jej kód vymažate, vrátťe ho naspäť a Build -> Rebuild Solution
+
+## Základné prvky
+### Button
+- tlačidlo
+- najpoužívanejšia udalosť je `Click` (kliknutie)
+
+### Label
+- text (štítok) bez používateľskej interakcie
+
+### TextBox
+- textové pole
+- najčastejšie sa z neho preberá alebo do neho vkladá nejaký text
+- najpoužívanejšia udalosť je `TextChanged` (pridanie alebo odstránenie znaku)
+
+### ComboBox
+- rolovacia ponuka na výber z viacerých možností
+- najpoužívanejšia udalosť je `SelectedIndexChanged`
+- defaultne sa dá do neho písať, na zmenu čoho slúži vlastnosť `DropDownStyle` (hodnota `DropDownList` z neho spraví read-only)
+- k jednotlivým prvkom sa dá v kóde pristupovať cez vlastnosti ako `SelectedIndex` a `SelectedItem`
+- v Properties okne sa do neho dá vkladať defaultná hodnota prvkov cez vlastnosť `Items`, v praxi je však vhodnejšie tieto prvky definovať v kóde
+  - `Items` sa správa ako zoznam, takže nové prvky sa dajú vkladať cez metódu `Add`
+  - v praxi sa bežne nastavuje aj ktorý prvok bude zobrazený (zvolený) ako defaultný
+```cs
+        public Form1()
+        {
+            InitializeComponent();
+            comboBoxOperacie.Items.Add("+");
+            comboBoxOperacie.Items.Add("-");
+            comboBoxOperacie.Items.Add("*");
+            comboBoxOperacie.Items.Add("/");
+            comboBoxOperacie.SelectedIndex = 0;
+        }
+```
+
+### NumericUpDown
+- výber čísla z rozsahu pomocou šípok
+- rozsah a krok sa určujú na základe vlastností `Minimum`, `Maximum` a `Increment`
+- najpoužívanejšia udalosť je `ValueChanged`
+
+### CheckBox a RadioButton
+- začiarkavacie políčka, 
+  - pri `CheckBox` sa zo skupiny dá zvoliť ľubovoľný počet
+  - pri `RadioButton` sa zo skupiny dá zvoliť presne jedno
+- najpoužívanejšia udalosť je `CheckedChanged`
+- boolová vlastnosť, ktorá označuje začiarknutie políčka, je `Checked`
