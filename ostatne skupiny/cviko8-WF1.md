@@ -99,6 +99,7 @@ namespace Kalkulacka
 - textové pole
 - najčastejšie sa z neho preberá alebo do neho vkladá nejaký text
 - najpoužívanejšia udalosť je `TextChanged` (pridanie alebo odstránenie znaku)
+- môže byť aj viacriadkové pri nastavení vlastnosti `Multiline` na `true`, spravidla so scrollbarom cez `ScrollBars` na `Vertical` (alebo `Horizontal` alebo `Both`)
 
 ### ComboBox
 - rolovacia ponuka na výber z viacerých možností
@@ -131,3 +132,7 @@ namespace Kalkulacka
   - pri `RadioButton` sa zo skupiny dá zvoliť presne jedno
 - najpoužívanejšia udalosť je `CheckedChanged`
 - boolová vlastnosť, ktorá označuje začiarknutie políčka, je `Checked`
+
+### MenuStrip
+- hlavná ponuka dostupná v hornej lište
+- udalosti sa vytvárajú ku každému "tlačidlu"
