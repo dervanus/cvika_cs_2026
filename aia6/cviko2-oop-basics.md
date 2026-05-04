@@ -13,8 +13,8 @@
 - `this.` - špecifikácia pri prístupe k členom danej triedy (ekvivalentné `self.` v Pythone, len nie je nutné posielať ako parameter/argument)
 
 ## štyri piliere OOP
-- abstrakcia - triedy v princípe neobsahujú žiadne konkrétne dáta, iba štruktúru
-- enkapsulácia - triedy zoskupujú vlastnosti aj správanie objektu
+- abstrakcia - pri ich použití je viditeľné iba čo objekt robí, nie ako to robí (žiadne detaily z pohľadu používateľa)
+- enkapsulácia - prístup k premenným triedy je nepriamy a riadený primárne metódami
 - dedičnosť - triedy môžu byť buď potomkom inej triedy (a obsahovať rovnaké metódy a atribúty), alebo mať potomkov (ktorí obsahujú rovnaké metódy a atribúty)
 - polymorfizmus - člen triedy (predovšetkým metóda) môže mať iné správanie v závislosti od implementácie
 
